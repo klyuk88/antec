@@ -1,0 +1,1505 @@
+$accent: #e9cda0
+$bg: #181B1E
+
+.container
+    max-width: 1370px!important    
+
+@mixin btn
+    border: none
+    color: #ffffff
+    border-radius: 46px
+    width: 70%
+    height: 91px
+    background: #BEA680
+    background: linear-gradient(to bottom, #BEA680, #877457)
+    box-shadow: 3px 0px 30px rgba(190, 166, 128, 0.85)
+    transition: all 0.25s ease
+
+@mixin btn-hover
+    box-shadow: 3px 0px 50px rgba(190, 166, 128, 0.85)
+
+        
+        
+
+body
+    font:
+        family: Montserrat
+        weight: 400
+    color: #ffffff
+    overflow-x: hidden
+
+html
+    overflow-x: hidden    
+
+input:focus, input:active, button:active, button:focus
+    box-shadow: none
+    outline: none        
+
+input
+    border-radius: 0
+
+.header_up
+    height: 100vh
+    position: relative
+    background: 
+        position: enter
+        size: cover
+        repeat: no-repeat
+    z-index: 0
+    @media screen and ( max-width: 1450px )
+        height: auto
+        padding-bottom: 200px
+    @media screen and ( max-width: 576px)
+        padding-bottom: 150px 
+    &-overlay
+        position: absolute
+        display: block
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: rgba(23, 26, 35, 0.7)
+        z-index: -1
+    &__arrow
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        bottom: 80px
+        animation: up-down 1s infinite ease-in-out
+        animation-direction: alternate-reverse
+
+@keyframes up-down
+    0%
+        
+    100%
+        bottom: 70px
+                
+
+
+
+.header_up-menu
+    div
+        height: 4px
+        background-color: $accent
+        margin-bottom: 4px
+        cursor: pointer
+
+    
+.header_up-menu__line1
+    width: 40px
+.header_up-menu__line2
+    width: 32px
+    transition: all 0.25s ease
+.header_up-menu__line3
+    width: 26px
+    transition: all 0.4s ease
+
+.header_up-contacts
+    p
+        margin-bottom: 10px
+        color: #ffffff
+    i
+        font-size: 15px
+        margin-right: 15px
+        color: $accent
+    &__phone
+        font:
+            size: 20px
+    &__mail
+        letter-spacing: 1.3px
+        font:
+            size: 14px
+    &__callback
+        cursor: pointer
+        text-decoration: none
+        color: #ffffff
+        font:
+            size: 14px
+        padding: 0 0 10px 0
+        border: none
+        border-bottom: 1px solid $accent
+    &__callback:hover
+        text-decoration: none
+        color: $accent
+            
+ 
+
+.fa-phone
+    transform: scale(-1, 1)
+
+
+.header-content
+    margin-top: 100px
+    &__title_before
+        font:
+            size: 22px
+            weight: 400
+        line-height: 27px
+        @media screen and ( max-width: 576px  )
+            font-size: 16px
+            
+    &__title
+        margin-top: 68px
+        font:
+            size: 48px
+            weight: 400
+        @media screen and ( max-width: 576px)
+            font-size: 30px
+            margin-top: 35px 
+        span
+            color: $accent
+            font-weight: 500
+    &-form
+        margin-top: 52px
+        &-buttom_content
+            margin-top: 55px
+        input
+            width: 70%
+            background-color: transparent
+            border: none
+            border-radius: 0
+            border-bottom: 1px solid $accent
+            padding-bottom: 10px
+            color: #ffffff
+            font:
+                size: 20px
+            @media screen and ( max-width: 576px)
+                margin-bottom: 25px
+                font-size: 14px  
+        input::placeholder
+            color: #ffffff
+            font:
+                size: 20px
+                font-weight: 400
+            @media screen and ( max-width: 576px)
+                font-size: 14px    
+        button
+            @include btn
+            @media screen and ( max-width: 576px )
+                width: 100%
+                font-size: 16px
+                height: 70px
+                
+        button:hover
+            @include btn-hover
+
+
+.play_video_block
+    @media screen and ( max-width: 576px)
+        margin-top: 35px
+    &__btn
+        width: 91px
+        height: 91px
+        border-radius: 50%
+        border: 1px solid $accent
+        box-shadow: inset 0px 0px 6px rgba(190, 166, 128, 1), 0px 0px 6px rgba(190, 166, 128, 1)
+        margin-right: 25px
+        cursor: pointer
+        transition: all 0.25s ease
+    &__btn:hover
+        box-shadow: inset 0px 0px 15px rgba(190, 166, 128, 1), 0px 0px 25px rgba(190, 166, 128, 1)
+    &-text
+        &__cta
+            text-decoration: none
+            color: #ffffff
+            cursor: pointer
+            margin-bottom: 10px
+            font:
+                size: 14px
+                weight: 400
+        &__cta:hover
+            color: $accent
+            text-decoration: none    
+        &__time
+            font:
+                size: 14px
+                weight: 300
+            opacity: 0.8
+            margin: 0   
+       
+                  
+.menu
+    background-color: #181B1E
+    position: fixed
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    padding: 250px 0
+    display: none
+    z-index: 100
+    @media screen and ( max-width: 767px)
+        height: 99%
+        overflow-y: auto
+        overflow-x: hidden
+    @media screen and ( max-width: 567px)
+        padding: 100px 0
+    &__bg
+        position: absolute
+        top: 20%
+        left: 20%
+    &__close
+        position: absolute
+        top: 20px
+        right: 20px
+        cursor: pointer
+        font-size: 35px
+    &-list
+        padding: 0
+        // list-style: none
+        li
+            font:
+                size: 48px
+                weight: 300
+            @media screen and ( max-width: 1024px  )
+                font-size: 25px     
+            @media screen and ( max-width: 567px  )
+                font-size: 20px     
+            a
+                color: #ffffff
+                opacity: 0.8
+                text-decoration: none
+                transition: all 0.25 ese   
+        &__ellips
+            opacity: 0
+            transition: all 0.25 ease    
+    &-form
+        input
+            width: 100%
+            margin-bottom: 25px
+            background-color: transparent
+            border: none
+            border-bottom: 1px solid $accent
+            padding-bottom: 10px
+            color: #ffffff
+            font:
+                size: 20px
+        input::placeholder
+            color: #ffffff
+            font:
+                size: 20px
+                font-weight: 400
+        button
+            margin-top: 50px
+            border: 3px solid $accent
+            color: #ffffff
+            border-radius: 46px
+            width: 100%
+            height: 91px
+            background: transparent
+            transition: all 0.25s ease
+        button:hover
+            background: $accent
+        &__title
+            margin-bottom: 70px
+            @media screen and ( max-width: 1024px)
+                font-size: 25px
+            @media screen and ( max-width: 576px)
+                font-size: 20px
+                   
+
+.about
+    background-color: $bg
+    padding: 150px 0
+    position: relative
+    @media screen and (max-width: 576px)
+        padding: 100px 0
+    &__title
+        font:
+            size: 43px
+            weight: 500
+        @media screen and (max-width: 576px)
+            font:
+                size: 25px  
+    &__subtitle
+        position: relative
+        line-height: 37px
+        padding-left: 40px
+        font:
+            size: 30px
+            weight: 300
+        @media screen and (max-width: 576px)
+            font:
+                size: 22px
+            text-align: center
+            padding: 0      
+        span
+            font:
+                weight: 500
+            color: $accent
+    &__subtitle:before
+        content: ''
+        background-color: $accent
+        height: 100%
+        width: 4px
+        position: absolute
+        left: 0
+        top: 0
+        display: block
+        @media screen and (max-width: 576px)
+            display: none     
+    &-list
+        list-style-image: url(/img/checkitem@2x.png)
+        margin-left: 40px
+        @media screen and (max-width: 576px)
+            margin-left: 0
+        i
+            color: $accent
+            margin-right: 15px
+        li
+            margin-bottom: 25px
+            padding-left: 25px
+            font:
+                size: 20px
+            @media screen and (max-width: 576px)
+                font-size: 14px
+                margin-bottom: 10px   
+    &__descr
+        font:
+            size: 20px
+        line-height: 40px
+        @media screen and (max-width: 576px)
+            font-size: 14px
+            text-align: center
+            line-height: 21px
+    &__btn
+        margin-top: 20px
+        @include btn
+        @media screen and (max-width: 576px)
+            width: 100%
+            height: 70px
+            font-size: 16px
+    &__btn:hover
+        @include btn-hover
+    &-item
+        margin: 0
+        font:
+            size: 43px
+            weight: 400   
+        @media screen and (max-width: 576px)
+            margin-top: 25px
+            text-align: center  
+        &_bg
+            box-sizing: border-box
+            display: flex
+            // justify-content: center
+            align-items: center
+            padding-left: 50px
+            padding-right: 60px
+            height: 470px
+            max-width: 638px
+            background:
+                position: center
+                size: cover
+                repeat: no-repeat
+            @media screen and (max-width: 576px)
+                height: 300px
+                padding: 0 20px
+        &-descr
+            font:
+                size: 20px
+                weight: 300
+            line-height: 36px
+            @media screen and (max-width: 576px)
+                margin-top: 20px
+                text-align: center
+                font-size: 14px
+                line-height: 1.5
+    &-perfect
+        margin: 0
+        font:
+            size: 30px
+            weight: 500
+        @media screen and ( max-width: 576px )
+            font-size: 20px
+                
+    &__sign
+        max-width: 100%    
+    &__sign_descr
+        margin: 0
+        font:
+            size: 12px
+            weight: 300
+        opacity: 0.6
+    &-house-left
+        display: none
+        position: absolute
+        left: -380px
+        top: 10%
+        @media screen and ( max-width: 1900px)
+            display: none
+                                      
+    &-house-right
+        display: none
+        position: absolute
+        right: -150px
+        top: 15%
+        @media screen and ( max-width: 1900px)
+            display: none
+
+.numbers
+    background: #2E343A
+    background: linear-gradient(to bottom right, #2E343A, #121416)
+    &-item
+        font:
+            size: 106px
+        color: $accent
+        @media screen and ( max-width: 576px )
+            font-size: 50px
+    &-item_no
+        font:
+            size: 106px
+        color: $accent
+        @media screen and ( max-width: 576px )
+            font-size: 50px
+    &-text
+        font-size: 20px
+        font-weight: 300
+        text-align: center
+        @media screen and ( max-width: 576px )
+            font-size: 16px
+    &-item-wrap
+        width: 30%
+        padding: 120px 0
+        @media screen and ( max-width: 768px)
+            width: 100%
+        @media screen and ( max-width: 576px)
+            padding: 80px    
+    &-item-wrap.center
+        @media screen and ( max-width: 768px)
+            border-top: 2px solid $bg
+            border-bottom: 2px solid $bg
+
+
+
+.video-about
+    padding: 150px 0
+    background-color: $bg
+    @media screen and ( max-width: 992px )
+            text-align: center
+    &__title
+        font-size: 30px
+        font-weight: 500
+        @media screen and ( max-width: 992px )
+            text-align: center
+    &__descr
+        font-size: 20px
+        font-weight: 300
+        line-height: 40px
+        margin-top: 60px
+        @media screen and ( max-width: 992px )
+            text-align: center
+        @media screen and ( max-width: 576px )
+            font-size: 14px
+            line-height: 21px
+    &__btn
+        @include btn
+        width: 100%
+        margin-top: 30px
+        @media screen and ( max-width: 1200px )
+            text-align: center
+            width: 30%
+        @media screen and ( max-width: 992px )
+            text-align: center
+            width: 50%
+        @media screen and ( max-width: 576px )
+            text-align: center
+            width: 100%
+            height: 70px
+            font-size: 16px
+    &__btn:hover
+        @include btn-hover
+
+.stages
+    padding: 120px 0
+    background-color: $bg
+    text-align: center
+    position: relative
+    overflow: hidden
+    @media screen and ( max-width: 768px)
+        padding: 0
+    &__title
+        margin-bottom: 80px
+        font:
+            size: 43px
+            weight: 500
+        text-align: center
+        @media screen and ( max-width: 768px)
+            font-size: 25px
+
+
+
+
+.round-wrap-mob-item.slick-slide
+    width: 60%!important
+
+
+.round-wrap-mob-item.slick-slide:focus
+    outline: none
+    border: none
+
+
+.video-prev-wrap
+    display: flex
+    width: 110%
+    align-items: center
+    justify-content: center
+    background: 
+        image: url('../img/video_new_photo@2x.png')
+        position: center
+        size: cover
+    height: 700px
+    @media screen and ( max-width: 1200px )
+        width: 100%
+        margin-top: 50px
+    @media screen and ( max-width: 567px )
+        height: 270px
+
+        
+    
+.video-prev-wrap-btn
+    svg
+        width: 100px
+        @media screen and ( max-width: 567px )
+            width: 60px
+    &__round
+        width: 200px
+        height: 200px
+        border: 3px solid #ffffff
+        border-radius: 50%
+        transition: all 0.25s ease
+        @media screen and ( max-width: 567px )
+            width: 100px
+            height: 100px
+    &__round:hover
+        box-shadow: inset 0px 0px 10px 0px rgba(255,255,255,1), 0px 0px 10px 0px rgba(255,255,255,1)
+
+.stages_round
+    g,text,path
+        cursor: pointer
+
+.docs
+    padding: 120px 0
+    background:
+        position: center
+        size: cover
+        repeat: no-repeat
+    h6
+        font-size: 25px
+        font-weight: 300
+        @media screen and ( max-width: 576px  )
+            font-size: 14px
+    h3
+        font:
+            size: 40px
+            weight: 500
+        color: $accent
+        margin-top: 50px
+        @media screen and ( max-width: 576px  )
+            font-size: 25px
+            margin-top: 25px
+    h5
+        font-size: 25px
+        font-weight: 300
+        margin-top: 30px
+        @media screen and ( max-width: 576px  )
+            font-size: 14px
+            margin-top: 1px
+    button
+        width: 60%
+        border: 5px solid $accent
+        background: transparent
+        border-radius: 65px
+        height: 105px
+        color: #ffffff
+        font:
+            size: 20px
+            weight: 500
+        box-shadow: inset 0px 0px 30px 0px rgba(190,166,128,1), 0px 0px 30px 0px rgba(190,166,128,1)
+        margin-top: 30px
+        @media screen and ( max-width: 576px )
+            width: 90%
+            font-size: 14px
+            height: 70px
+            font-size: 16px
+            
+    button:hover
+        box-shadow: inset 0px 0px 40px 0px rgba(190,166,128,1), 0px 0px 45px 0px rgba(190,166,128,1)
+
+
+.docs-photos
+    height: 500px
+    position: relative
+    @media screen and ( max-width: 992px )
+        margin-top: 50px
+    @media screen and ( max-width: 576px )
+        display: none   
+    &-one
+        position: absolute
+        top: -50px
+        right: 30%
+        box-shadow: 50px 50px 50px rgba(0,0,0,0.2)
+        z-index: 1
+        @media screen and ( max-width: 992px )
+            top: 0     
+    &-two
+        position: absolute
+        top: 50px
+        right: 30%
+        box-shadow: 50px 50px 50px rgba(0,0,0,0.2)
+        z-index: 0
+        transition: all 0.7s ease
+        
+
+.transform-doc
+    transform: translateX(150px) rotate(15deg)
+
+  
+
+.advantage
+    background-color: $bg
+    padding: 120px 0
+    &__title
+        font-size: 25px
+        font-weight: 300
+        @media screen and ( max-width: 576px )
+            text-align: center
+            font-size: 14px
+    &__subtitle
+        font-size: 40px
+        font-weight: 500
+        color: $accent
+        margin-bottom: 70px
+        @media screen and ( max-width: 576px )
+            text-align: center
+            font-size: 25px
+    &-item
+        margin-top: 50px
+        margin-bottom: 50px
+        @media screen and ( max-width: 576px )
+            text-align: center   
+        &__num
+            font-size: 51px
+            font-weight: 300
+            position: relative
+            z-index: 10
+            cursor: pointer
+            @media screen and ( max-width: 576px )
+                font-size: 30px
+                margin-bottom: 70px
+
+                
+            svg
+                position: absolute
+                left: 0
+                top: -15px
+                z-index: -1
+                cursor: pointer
+                @media screen and ( max-width: 576px)
+                    left: 50%
+                    transform: translateX(-50%)
+                path
+                    transition: all 0.25s ease
+        &__title
+            font-size: 25px
+            font-weight: 500
+            color: $accent
+            margin: 70px 0 0 0
+            cursor: pointer
+            transition: all 0.25s ease
+            @media screen and ( max-width: 576px)
+                font-size: 20px
+                margin: 40px 0 0 0
+        &__text
+            font-size: 18px
+            font-weight: 300
+            margin: 40px 0 0 0
+            cursor: pointer
+            width: 80%
+            @media screen and ( max-width: 576px )
+                width: 100%
+                margin: 20px 0 0 0
+                font-size: 14px
+    &-down-block
+        display: flex
+        align-items: center
+        justify-content: space-between
+        @media screen and ( max-width: 768px )
+            flex-direction: column
+            align-items: start
+            text-align: left
+        @media screen and ( max-width: 576px )
+            align-items: center
+            text-align: center
+        &-text
+            width: 80%
+            // @media screen and ( max-width: 768px )
+            //     width: 100%
+        &__btn
+            width: 80%
+            border: 5px solid $accent
+            background: transparent
+            border-radius: 65px
+            height: 105px
+            color: #ffffff
+            font:
+                size: 20px
+                weight: 500
+            margin-top: 30px
+            transition: all 0.25s ease
+            @media screen and ( max-width: 576px )
+                width: 100%
+                height: 70px
+                font-size: 16px
+        &__btn:hover
+            background-color: $accent
+
+
+.quiz
+    padding: 120px 0
+    min-height: 916px
+    background:
+        image: url('../img/bg_coffe_sec@2x.png')
+        position: center
+        size: cover
+        repeat: no-repeat
+    // background: #282B2E
+    // background: linear-gradient(135deg, rgba(212,212,212,1) 0%, rgba(0,212,255,0) 100%)
+    // background: linear-gradient(to bottom right, #282B2E, #1E1E1E)
+    position: relative
+    img
+        position: absolute
+        right: 0
+        top: -150px
+        width: 600px
+        @media screen and ( max-width: 1200px )
+            width: 450px
+            top: 0
+        @media screen and ( max-width: 767px)
+            display: none
+    &-item
+        &-cta
+            font-size: 25px
+            font-weight: 300
+            span
+                color: $accent
+            @media screen and ( max-width: 576px  )
+                font-size: 14px
+        &__title
+            font-size: 40px
+            font-weight: 500
+            color: $accent
+            margin-top: 50px
+            @media screen and ( max-width: 576px )
+                font-size: 20px
+        &-question
+            &__subtitle
+                font-size: 25px
+                font-weight: 300
+                color: $accent
+                opacity: 0.7
+                margin-top: 50px
+                @media screen and ( max-width: 576px  )
+                    font-size: 14px
+            h6
+                font-size: 30px
+                font-weight: 500
+                margin-top: 30px
+                @media screen and ( max-width: 576px )
+                    font-size: 20px
+            &-input
+                width: 100%
+                height: 100px
+                border: 3px solid $accent
+                color: #ffffff
+                font-size: 14px
+                background: transparent
+                border-radius: 55px
+                padding-left: 30px
+                @media screen and ( max-width: 576px )
+                    height: 70px
+                    
+            &-input:focus
+                box-shadow: inset 3px 0px 10px rgba(190, 166, 128, 0.85), 3px 0px 10px rgba(190, 166, 128, 0.85)   
+            &-input::placeholder
+                color: #ffffff
+                opacity: 0.5
+            &-next-q
+                cursor: pointer
+                display: flex
+                align-items: center
+                justify-content: center
+                color: #ffffff
+                height: 100px
+                width: 100%
+                background-color: #BEA680
+                border-radius: 55px
+                transition: all 0.25s ease
+                @media screen and ( max-width: 1200px )
+                    margin-top: 30px
+                @media screen and ( max-width: 576px )
+                    height: 70px
+                    font-size: 16px
+            &-next-q:hover
+                box-shadow: 3px 0px 30px rgba(190, 166, 128, 0.85)
+
+.quiz-item-question-radio-label
+    display: inline-block
+    cursor: pointer
+    position: relative
+    padding-left: 40px
+    margin-right: 15px
+    font-size: 14px
+    margin-top: 20px
+
+.quiz-item-question-radio[type=radio]
+    display: none
+.quiz-item-question-radio[type=checkbox]
+    display: none
+
+.quiz-item-question-radio-label:before
+    content: ""
+    display: inline-block
+    width: 21px
+    height: 21px
+    margin-right: 10px
+    position: absolute
+    left: 0
+    bottom: 1px
+    background-color: transparent
+    border-radius: 50%
+    border: 1px solid #e9cda0
+
+
+
+.quiz-item-question-radio[type=radio]:checked+.quiz-item-question-radio-label:before
+    content: "\2022"
+    color: #e9cda0
+    font-size: 30px
+    text-align: center
+    line-height: 15px
+
+.quiz-item-question-radio[type=checkbox]:checked+.quiz-item-question-radio-label:before
+    content: "\2022"
+    color: #e9cda0
+    font-size: 30px
+    text-align: center
+    line-height: 15px
+
+
+.quiz-item-question-next
+    font-size: 14px
+    font-weight: 500
+    color: $accent
+    text-shadow: 0px 0px 30px rgba(226,198,153,1)
+    margin-top: 20px
+    margin-bottom: 0
+    cursor: pointer
+    transition: all 0.25s ease
+.quiz-item-question-next:hover
+    text-shadow: none
+
+
+.quiz:before
+    content: ''
+    width: 100%
+    height: 100%
+    background-color: $bg
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -1              
+
+                
+.projects
+    padding: 120px 0
+    background-color: $bg
+    position: relative
+    &__subtitle
+        font-size: 25px
+        font-weight: 300
+        @media screen and ( max-width: 576px)
+            font-size: 16px
+    &__title
+        font-size: 40px
+        font-weight: 500
+        color: $accent
+        @media screen and ( max-width: 576px)
+            font-size: 25px
+    &-slider
+        margin-top: 60px
+        // position: relative
+        z-index: 1
+        &-item
+            background:
+                position: center
+                size: cover
+                repeat: no-repeat
+            padding: 100px 70px
+            height: 700px
+            position: relative
+            border-radius: 10px
+            // box-shadow: 0px 80px 50px 0px rgba(0,0,0,0.8)
+            @media screen and ( max-width: 992px)
+                padding: 100px 15px
+            @media screen and ( max-width: 576px)
+                height: 600px
+                padding: 70px 15px    
+            &-text
+                h3
+                    font-size: 53px
+                    font-weight: 400
+                    @media screen and ( max-width: 576px)
+                        font-size: 30px
+                h5
+                    font-size: 20px
+                    font-weight: 400
+                    @media screen and ( max-width: 576px)
+                        font-size: 16px
+            &-btns
+                @media screen and ( max-width: 576px )
+                    flex-direction: column
+                button
+                    height: 70px
+                    color: #ffffff
+                    border: 2px solid #ffffff
+                    background-color: #BEA680
+                    width: 250px
+                    border-radius: 55px
+                    font-size: 14px
+                    transition: all 0.25s ease
+                    @media screen and ( max-width: 576px )
+                        width: 100%
+                        margin-top: 30px
+                        
+                button:hover
+                    background: transparent
+                    border-color: #BEA680
+            &-arr
+                width: 100px
+                height: 100px
+                display: flex
+                align-items: center
+                justify-content: center
+                background: #5F5340
+                background: linear-gradient(to top, #5F5340, #BEA680)
+                box-shadow: 0px 0px 20px 0px rgba(179,157,121,1)
+                border-radius: 50%
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+                cursor: pointer
+                z-index: 2
+                @media screen and ( max-width: 576px )
+                    width: 35px
+                    height: 35px
+                img
+                    @media screen and ( max-width: 576px )
+                        width: 10px
+                        height: auto
+            &-arr:hover
+                box-shadow: 0px 0px 30px 0px rgba(179,157,121,1)    
+            &-arr.prev
+                left: 0
+                @media screen and ( max-width: 1920px )
+                    left: 200px
+                @media screen and ( max-width: 1450px )
+                    left: 0
+            &-arr.next
+                right: 0
+                @media screen and ( max-width: 1920px )
+                    right: 200px
+                @media screen and ( max-width: 1450px )
+                    right: 0
+.play_video_block__btn.s-slider
+    @media screen and ( max-width:  576px)
+        width: 50px
+        height: 50px
+    svg
+        @media screen and ( max-width:  576px)
+            width: 25px
+            height: 25px    
+        
+.contacts
+    padding: 120px 0
+    background-color: #212528
+    &-text
+        h6
+            font-size: 18px
+            font-weight: 400
+            @media screen and ( max-width: 576px )
+                font-size: 16px
+        h5
+            font-size: 30px
+            font-weight: 500
+            color: #BEA680
+            margin-top: 40px
+            @media screen and ( max-width: 576px )
+                font-size: 25px
+        &-form
+            input
+                border: none
+                border-bottom: 1px solid #BEA680
+                color: #ffffff
+                background: transparent
+                padding-bottom: 25px
+                margin-top: 40px
+                @media screen and ( max-width: 576px )
+                    font-size: 14px
+            input::placeholder
+                color: #ffffff
+                font-size: 18px
+                font-weight: 300
+                @media screen and ( max-width: 576px )
+                    font-size: 14px
+            button
+                background-color: #fff
+                background: #A39070
+                background: linear-gradient(to bottom, #A39070, #6D614D)
+                color: #ffffff
+                font-size: 18px
+                font-weight: 500
+                height: 90px
+                width: 100%
+                border-radius: 55px
+                border: none
+                margin-top: 70px
+                box-shadow: 0px 0px 30px 0px rgba(148,131,102,1)
+                @media screen and ( max-width: 576px )
+                    font-size: 14px
+                    height: 70px 
+            button:hover
+                box-shadow: 0px 0px 40px 0px rgba(148,131,102,1)
+    &-map
+        @media screen and ( max-width: 1200px)
+            margin-top: 40px
+        &-map
+            height: 450px
+            box-shadow: 0 50px 50px rgba(0,0,0,0.3 )
+            width: 100%
+            // background:
+            //     image: url('../img/cV3FK@2x.jpg')
+            //     position: center
+            //     size: cover
+            //     repeat: no-repeat
+            @media screen and ( max-width: 1200px)
+                height: 300px
+            &-text-contacts
+                i
+                    color: $accent
+                    margin-right: 10px
+                &__phone
+                    font-size: 20px
+                &__mail
+                    font-size: 18px
+                a
+                    color: $accent
+                    @media screen and ( max-width: 576px)
+                        font-size: 14px
+.text-left
+    font-size: 20px                        
+
+
+.contacts-map-map-text-title
+    h5
+        font-size: 20px
+        font-weight: 400
+        line-height: 40px
+        @media screen and ( max-width: 576px)
+            font-size: 14px
+    h4
+        font-size: 20px
+        font-weight: 400
+        color: $accent
+        letter-spacing: 3px
+        margin-top: 20px
+        @media screen and ( max-width: 576px)
+            font-size: 14px
+
+.contacts-map-map-text__logo
+    img
+        width: 100%
+        @media screen and ( max-width: 1200px )
+            max-width: 200px
+        @media screen and ( max-width: 576px )
+            width: 100px
+                
+                       
+.footer
+    background-color: $bg
+    padding: 120px 0
+    @media screen and ( max-width: 576px)
+        padding: 60px 0
+    img
+        @media screen and ( max-width: 576px  )
+            width: 100px    
+    &__title
+        font-size: 22px
+        font-weight: 400
+        color: $accent
+        @media screen and ( max-width: 576px)
+            display: none
+    &-menu
+        display: flex
+        flex-wrap: wrap
+        list-style: none
+        justify-content: space-between
+        padding: 0
+        margin-top: 40px
+        margin-bottom: 0
+        li
+            width: 25%
+            margin-top: 30px
+            @media screen and ( max-width: 768px)
+                display: none
+            a
+                color: #B9B9B9
+                text-decoration: none
+                font-size: 22px
+                font-weight: 300
+            a:hover
+                color: #ffffff
+    &-brand
+        color: $accent
+        font-size: 22px
+        @media screen and ( max-width: 576px )
+            font-size: 14px
+
+.popup-about-project
+    display: none
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 90%
+    overflow-y: auto
+    background-color: $bg
+    z-index: 99
+    padding: 50px 0
+    @media screen and ( max-width: 576px)
+        height: 99%
+        overflow-y: auto
+    &-arr
+        width: 50px
+        height: 50px
+        display: flex
+        align-items: center
+        justify-content: center
+        background: #5F5340
+        background: linear-gradient(to top, #5F5340, #BEA680)
+        box-shadow: 0px 0px 20px 0px rgba(179,157,121,1)
+        border-radius: 50%
+        position: absolute
+        top: 40%
+        transform: translateY(-50%)
+        cursor: pointer
+        @media screen and ( max-width: 576px )
+            display: none
+        img
+            width: 15px
+            height: auto
+        @media screen and ( max-width: 576px )
+            width: 35px
+            height: 35px
+        img
+            @media screen and ( max-width: 576px )
+                width: 10px
+                height: auto
+    &-arr:hover
+        box-shadow: 0px 0px 30px 0px rgba(179,157,121,1)    
+    &-arr.prev
+        left: 25px
+        @media screen and ( max-width: 576px )
+            left: 0
+    &-arr.next
+        right: 25px
+        @media screen and ( max-width: 576px )
+            right: 0
+    &__close
+        position: absolute
+        right: 15px
+        top: 15px
+        cursor: pointer
+    &-sider
+        &-item
+            &__photo
+                width: 100%
+            &-icons
+                display: flex
+                align-items: center
+                justify-content: space-around
+                @media screen and ( max-width: 576px )
+                    flex-direction: column
+                    align-items: start
+                    margin-bottom: 30px
+                img
+                    margin-right: 15px
+                    width: 33px!important
+                &-item
+                    display: flex
+                    align-items: center
+                    @media screen and ( max-width: 576px )
+                        margin-top: 20px
+                    p
+                        margin: 0
+                        font-size: 14px
+                        font-weight: 300
+            &-btn
+                height: 70px
+                width: 100%
+                border: 2px solid #BCA47F
+                background-color: transparent
+                color: #ffffff
+                border-radius: 55px
+                cursor: pointer
+                transition: all 0.25s ease
+                font-size: 14px
+            &-btn:hover
+                background-color: #BCA47F  
+    &-text
+        h4
+            font-size: 40px
+            font-weight: 400
+            @media screen and ( max-width: 576px)
+                font-size: 25px
+                text-align: center
+                margin-top: 35px
+        &__subtitle
+            font-size: 20px
+            font-weight: 400
+            @media screen and ( max-width: 576px)
+                font-size: 16px
+                text-align: center
+        &__descr
+            font-size: 20px
+            font-weight: 300
+            line-height: 40px
+            margin-top: 30px
+            @media screen and ( max-width: 576px)
+                font-size: 14px
+                text-align: center
+                line-height: 21px
+                margin-top: 15px
+
+.projects-slider.owl-carousel.owl-loaded.owl-drag
+    >.owl-stage-outer
+        >.owl-stage
+            display: flex
+            align-items: center
+
+.projects-slider.owl-carousel.owl-loaded.owl-drag
+    >.owl-stage-outer
+        >.owl-stage
+            >.owl-item.active.center
+                >.projects-slider-item
+                    height: 800px
+                    @media screen and ( max-width: 1200px)
+                        height: 700px
+                    @media screen and ( max-width: 576px)
+                        height: 600px
+
+.irs--round .irs-line
+    height: 10px
+    background-color: #404850
+
+.irs--round .irs-bar
+    height: 10px
+    background-color: $accent
+
+.irs--round .irs-handle
+    width: 21px
+    height: 21px
+    border: 3px solid #ffffff
+    background-color: $accent
+    top: 30px
+
+.irs--round .irs-min, .irs--round .irs-max
+    background-color: transparent
+    font-size: 14px
+    color: #fff
+    font-family: Montserrat
+    letter-spacing: 1px
+
+.irs--round .irs-from, .irs--round .irs-to, .irs--round .irs-single
+    font-family: Montserrat
+    letter-spacing: 1px
+    background-color: transparent
+
+.irs--round .irs-from:before, .irs--round .irs-to:before, .irs--round .irs-single:before
+    border-top-color: $accent
+
+.quiz-item-question__title
+    margin-bottom: 50px        
+
+.quiz-item-question-input.q7
+    height: 90px
+    width: 60%
+    @media screen and ( max-width: 767px)
+        width: 100%
+    @media screen and ( max-width: 576px)
+        height: 70px   
+        
+
+.input_icon-load_file
+    width: 35px
+    height: auto
+
+.btn-tertiary
+    color: #555
+    padding: 0
+    line-height: 40px
+    display: block
+    border: 2px solid #e9cda0
+    border-radius: 60px
+    height: 90px
+    @media screen and ( max-width: 576px  )
+        height: 70px
+        
+
+.btn-tertiary:hover,
+.btn-tertiary:focus
+    color: #888
+
+.input-file
+    width: .1px
+    height: .1px
+    opacity: 0
+    overflow: hidden
+    position: absolute
+    z-index: -1
+
+.input-file+.js-labelFile
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+    padding: 0 10px
+    cursor: pointer
+
+.input-file+.js-labelFile .icon:before
+    content: "\f093"
+
+.input-file+.js-labelFile.has-file .icon:before
+    content: "\f00c"
+    color: #5AAC7B
+
+.start_begin
+    text-shadow: none
+    color: #ffffff
+    opacity: 0.6
+.start_begin:hover
+    opacity: 1
+
+.btn_send
+    background-color: transparent
+    border: none
+
+.modal_thanks
+    display: none
+    border: 4px solid $accent
+    position: fixed
+    width: 550px
+    background-color: $bg  
+    top: 20%
+    left: 50%
+    transform: translateX(-50%)
+    z-index: 99
+    height: auto
+    text-align: center
+    border-radius: 10px
+    padding: 100px 0
+    @media screen and ( max-width: 576px )
+        width: 95%
+        padding: 20px 0
+        height: auto
+    &__title
+        @media screen and ( max-width: 576px )
+            font-size: 16px
+            font-weight: 400
+
+.thanks_close
+    @media screen and ( max-width: 576px)
+        width: 10px
+        top: 5px
+        right: 5px
+                    
+
+
+.stages-mob_v
+    padding: 0 15px
+    &__arr_prev
+        position: absolute
+        top: 30%
+        left: 20px
+    &__arr_next
+        position: absolute
+        top: 30%
+        right: 20px
+    &-item
+        padding: 50px 0
+        &__number
+            width: 56px
+            height: 56px
+            border: 2px solid $accent
+            display: flex
+            justify-content: center
+            align-items: center
+            font-size: 20px
+            font-weight: 300
+            border-radius: 50%
+            box-shadow: inset 0px 0px 10px 0px rgba(190,166,128,1), 0px 0px 10px 0px rgba(190,166,128,1)
+            margin: 0 auto
+        &__title
+            font:
+                size: 14px
+                weight: 400
+            margin-top: 30px
+        &__four_stage_title
+            color: #BEA680
+            font:
+                size: 13px
+                weight: 500
+            text-shadow: 0px 0px 10px 0px rgba(190,166,128,0.2)
+            top: 0
+            left: 50%
+            transform: translateX(-50%)
+
+// POPUP
+
+.popup_overlay
+    position: fixed
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    background: rgba(0, 0 ,0 ,0.6)
+    z-index: 99
+    display: none
+    &-form
+        padding: 80px 60px
+        background-color: $bg
+        position: absolute
+        width: 600px
+        border: 1px solid $accent
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        @media screen and ( max-width: 576px )
+            width: 100%
+        input
+            font-size 14px
+        button
+            font-size: 16px
+            height: 70px    
+        &__close
+            position: absolute
+            right: 10px
+            top: 10px
+            cursor: pointer
+
+
+
+
+
+    
+                
+
